@@ -382,7 +382,7 @@ class MoveEvent extends TapEvent {
     int pointer, {
     this.localDelta = const Offset(0, 0),
     this.delta = const Offset(0, 0),
-  }) : super(localPos, position, pointer);
+  }) : super(localPos, position, pointer, 0);
 }
 
 /// The pointer  has made a move.
