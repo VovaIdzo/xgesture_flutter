@@ -416,10 +416,12 @@ class TapEvent {
   ///    coordinate system of the event receiver.
   final Offset position;
 
-  const TapEvent(this.localPos, this.position, this.pointer);
+  final int buttons;
+
+  const TapEvent(this.localPos, this.position, this.pointer, this.buttons);
 
   static from(PointerEvent event) {
-    return TapEvent(event.localPosition, event.position, event.pointer);
+    return TapEvent(event.localPosition, event.position, event.pointer, event.buttons);
   }
 }
 
